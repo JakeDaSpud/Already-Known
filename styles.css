@@ -1,0 +1,76 @@
+/* Already Known by Jake O'Reilly */
+/* https://jakedaspud.github.io/JakeDaSpud/Already-Known */
+
+:root {
+    /* All Pico-8 Colours from https://lospec.com/palette-list/pico-8 */
+    --p8-black: #000000;
+    --p8-navy: #1D2B53;
+    --p8-wine: #7E2553;
+    --p8-green: #008751;
+
+    --p8-brown: #AB5236;
+    --p8-dark-grey: #5F574F;
+    --p8-grey: #C2C3C7;
+    --p8-white: #FFF1E8;
+    
+    --p8-red: #FF004D;
+    --p8-orange: #FFA300;
+    --p8-yellow: #FFEC27;
+    --p8-lime: #00E436;
+    
+    --p8-blue: #29ADFF;
+    --p8-purple: #83769C;
+    --p8-pink: #FF77A8;
+    --p8-peach: #FFCCAA;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--p8-white);
+    font-size: 16px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 16px;
+
+    background-color: var(--p8-navy);
+    color: var(--p8-white);
+    font-size: 32px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+main {
+    margin: 32px 64px;
+    padding: 0px 32px;
+    flex: 1;
+}
+
+footer {
+    width: 100%;
+    padding: 16px;
+    
+    background-color: var(--p8-navy);
+    color: var(--p8-white);
+    text-align: center;
+    font-size: 24px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+footer a {
+    color: var(--p8-white);
+}
+
+footer a:hover {
+    color: var(--p8-black);
+    background-color: var(--p8-white);
+}
