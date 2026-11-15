@@ -1,0 +1,218 @@
+/* Already Known by Jake O'Reilly */
+/* https://jakedaspud.github.io/JakeDaSpud/Already-Known */
+
+:root {
+    /* All Pico-8 Colours from https://lospec.com/palette-list/pico-8 */
+    --p8-black: #000000;
+    --p8-navy: #1D2B53;
+    --p8-wine: #7E2553;
+    --p8-green: #008751;
+
+    --p8-brown: #AB5236;
+    --p8-dark-grey: #5F574F;
+    --p8-grey: #C2C3C7;
+    --p8-white: #FFF1E8;
+    
+    --p8-red: #FF004D;
+    --p8-orange: #FFA300;
+    --p8-yellow: #FFEC27;
+    --p8-lime: #00E436;
+    
+    --p8-blue: #29ADFF;
+    --p8-purple: #83769C;
+    --p8-pink: #FF77A8;
+    --p8-peach: #FFCCAA;
+
+
+    --text: #120709;
+    --background: #f9f0f1;
+    --primary: #bd5666;
+    --secondary: #a0dac0;
+    --accent: #6ca8c6;
+
+
+    --text-50: #f8edef;
+    --text-100: #f1dade;
+    --text-200: #e2b6be;
+    --text-300: #d4919d;
+    --text-400: #c66c7d;
+    --text-500: #b8475c;
+    --text-600: #93394a;
+    --text-700: #6e2b37;
+    --text-800: #491d25;
+    --text-900: #250e12;
+    --text-950: #120709;
+
+    --background-50: #f8edee;
+    --background-100: #f0dbdd;
+    --background-200: #e2b6bb;
+    --background-300: #d39299;
+    --background-400: #c56d77;
+    --background-500: #b64955;
+    --background-600: #923a44;
+    --background-700: #6d2c33;
+    --background-800: #491d22;
+    --background-900: #240f11;
+    --background-950: #120709;
+
+    --primary-50: #f8edee;
+    --primary-100: #f1dade;
+    --primary-200: #e2b6bc;
+    --primary-300: #d4919b;
+    --primary-400: #c66c7a;
+    --primary-500: #b84758;
+    --primary-600: #933947;
+    --primary-700: #6e2b35;
+    --primary-800: #491d23;
+    --primary-900: #250e12;
+    --primary-950: #120709;
+
+    --secondary-50: #edf8f3;
+    --secondary-100: #daf1e7;
+    --secondary-200: #b6e2ce;
+    --secondary-300: #91d4b6;
+    --secondary-400: #6cc69d;
+    --secondary-500: #47b885;
+    --secondary-600: #39936a;
+    --secondary-700: #2b6e50;
+    --secondary-800: #1d4935;
+    --secondary-900: #0e251b;
+    --secondary-950: #07120d;
+
+    --accent-50: #edf4f8;
+    --accent-100: #dae9f1;
+    --accent-200: #b6d3e2;
+    --accent-300: #91bed4;
+    --accent-400: #6ca8c6;
+    --accent-500: #4792b8;
+    --accent-600: #397593;
+    --accent-700: #2b586e;
+    --accent-800: #1d3a49;
+    --accent-900: #0e1d25;
+    --accent-950: #070f12;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background);
+    font-size: 16px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    padding: 16px;
+
+    background-color: var(--primary);
+    color: var(--background);
+    font-size: 32px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li a {
+    display: block;
+    font-size: 20px;
+    color: var(--background);
+    background-color: none;
+    margin: 0 4px;
+    padding: 8px 12px;
+}
+
+nav ul li a:hover {
+    color: var(--text);
+    background-color: var(--background);
+    text-decoration: underline;
+}
+
+nav ul li a .current-page {
+    color: var(--primary) !important;
+    background-color: var(--background);
+    text-decoration: underline;
+}
+
+main {
+    margin: 32px 64px;
+    padding: 0px 32px;
+    flex: 1;
+    width: 65%;
+    align-self: center;
+}
+
+footer {
+    width: 100%;
+    padding: 16px;
+    
+    background-color: var(--primary);
+    color: var(--background);
+    text-align: center;
+    font-size: 24px;
+    font-family: monospace;
+    font-weight: bolder;
+}
+
+footer a {
+    color: var(--background);
+}
+
+footer a:hover {
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.vn-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    width: 100%;
+}
+
+.vn-row .modal-content {
+    flex: 1;
+}
+
+#vnSprite {
+    height: clamp(100px, 25vw, 200px);
+    width: auto;
+    flex-shrink: 0;
+    image-rendering: crisp-edges;
+}
+
+#vnName {
+    padding: 4px 8px;
+}
+
+#vnText {
+    min-height: 6em; /* THIS IS SO THE TEXT DOESNT' BOUNCE AROUND WHILE THE TEXT IS BEING TYPED*/
+}

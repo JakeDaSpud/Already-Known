@@ -8,23 +8,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0", lang="en">
     <title>Already Known - jake o'reilly</title>
     <!--<link rel="shortcut icon" href="assets/logo-ico.png" type="image/x-icon">-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header class="align-self-start" id="idHeader">
-        <img src="./assets/ak-logo.png" style="height: 2.5em; width: auto; object-fit: cover; filter: invert();">
-        Already Known
+        <nav>
+            <a href="#" class="header-logo" onclick="loadExperience(); return false;">
+                <img src="./assets/ak-logo.png" style="height: 2.5em; width: auto; object-fit: cover; filter: invert();">
+                Already Known
+            </a>
+            <ul>
+                <li class="current-page"><a href="#" data-tab="experience" onclick="loadExperience(); return false;">Experience</a></li>
+                <li><a href="#" data-tab="research" onclick="loadResearch(); return false;">Research</a></li>
+                <li><a href="#" data-tab="references" onclick="loadReferences(); return false;">References</a></li>
+                <li><a href="#" data-tab="reflection" onclick="loadReflection(); return false;">Reflection</a></li>
+                <li><a href="#" data-tab="about" onclick="loadAbout(); return false;">About</a></li>
+            </ul>
+        </nav>
     </header>
-
+    
     <main>
-        <h1>What's the deal with websites?</h1>
+        <section id="tab-experience">
+            <h1>What is Deceptive Design?</h1>
 
-        <h2></h2>
+            <h1>Cookie Banners</h1>
+            Obstruction, Visual Interference
+
+            <h1>Sign-up forms</h1>
+            Pre-selection, Trick questions
+
+            <h1>Discount pop-ups</h1>
+            Confirmshaming, Fake urgency
+
+            <h1>Pay or consent</h1>
+            Forced action, Nagging
+
+            <h1>Delete my account</h1>
+            Obstruction
+        </section>
+        
+        <section id="tab-research" hidden>
+            hey
+        </section>
+
+        <section id="tab-references" hidden>
+            referenfec
+        </section>
+        
+        <section id="tab-reflection" hidden>
+            reflections
+        </section>
+        
+        <section id="tab-about" hidden>
+            <h1>About this site</h1>
+            <p>"Already Known" is a project about deceptive design, also called dark patterns and deceptive patterns, coined by Harry Brignull.</p>
+            <p>These are design tricks that push people to make choices that they otherwise didn't plan to make. Websites often use them to collect more personal data than users want to give.</p>
+            
+            <h2>What you can do here</h2>
+            <ul>
+                <li><strong>Experience:</strong> Try five common dark patterns yourself. After each one, Spot the robot explains what happened. At the end, the site shows you what data it calculated from your actions.</li>
+                <li><strong>Research:</strong> Read about the ethical and legal sides, with EU and U.S. law and real case studies.</li>
+                <li><strong>References:</strong> See every source that this project uses.</li>
+                <li><strong>Reflection:</strong> Read my own view on dark patterns in the past, today, and in the future.</li>
+                <li><strong>About:</strong> This page, which explains what you can do on this site.</li>
+            </ul>
+
+            <h2>Your privacy</h2>
+            <p>This site is a simulation. It does not use cookies, accounts, or analytics. All files come from this site only. Your choices stay in your browser's memory and never leave your device. Once you leave this page or close the tab, the data gets deleted.</p>
+        </section>
     </main>
-
+    
     <footer>
         <a href="https://jakedaspud.github.io/JakeDaSpud/" target="_blank">jake o'reilly</a> | 2026
     </footer>
+
+    <!-- Visual Novel style Text Box with Spot -->
+    <div class="modal fade" id="vnModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="vn-row">
+                <img id="vnSprite" src="assets/spot_closed.png">
+                <div class="modal-content">
+                    <div>
+                        <h2 class="modal-title fs-5" id="vnName">Spot</h2>
+                        <button type="button" class="btn btn-sm btn-link ms-auto" data-bs-dismiss="modal">Skip</button>
+                    </div>
+                    <div class="modal-body" id="vnText"></div>
+                    <div class="modal-footer">
+                        <small id="vnCounter" class="me-auto"></small>
+                        <button type="button" class="btn btn-secondary" id="vnBack">Back</button>
+                        <button type="button" class="btn btn-primary" id="vnNext">next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
